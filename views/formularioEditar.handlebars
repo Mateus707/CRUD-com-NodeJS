@@ -1,0 +1,18 @@
+<main class="h-100 w-100">
+{{!-- formulario --}}
+    <div class="container h-100 w-100">
+        <div class="row h-100 w-100  justify-content-center align-items-center">
+            <div class="col-6 border border-primary p-4">
+                  
+                <form action="/atualizar" method="POST" enctype="multipart/form-data">
+                    <input type="number" name="idProduto" value="{{produtos.idProduto}}">
+                    <input type="text" class="form-control mb-3" name="nomeProduto"  value="{{produtos.nomeProduto}}">
+                    <input type="number" class="form-control mb-3"  name="valorProduto"  value="{{produtos.valorProduto}}">
+                    <input type="file" class="form-control mb-3"  name="imagemProduto">
+                    <input class="btn btn-outline-success" type="submit" value="Atualizar">
+                    <a href="/" class="btn btn-secondary">Cancelar</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>

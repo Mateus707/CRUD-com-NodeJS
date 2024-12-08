@@ -1,0 +1,29 @@
+                {{#condicionaligualdade situacao "Sucesso"}}
+                    <div class="alert alert-success  ">
+                        <p class="text-center text-dark">O produto foi cadastrado com sucesso</p>
+                    </div>
+                {{/condicionaligualdade}}
+
+                {{#condicionaligualdade situacao "removido"}}
+                    <div class="alert alert-success  ">
+                        <p class="text-center text-dark">O produto foi removido com sucesso</p>
+                    </div>
+                {{/condicionaligualdade}}
+
+                 {{#condicionaligualdade situacao "erroCadastro"}}
+                    <div class="alert alert-danger ">
+                        <p class="text-center text-dark">não foi possivel cadastrar seu produto</p>
+                    </div>
+                {{/condicionaligualdade}}
+                
+                 {{#condicionaligualdade situacao "erroeditar"}}
+                    <div class="alert alert-danger ">
+                        <p class="text-center text-dark">não foi possivel editar seu produto</p>
+                    </div>
+                {{/condicionaligualdade}}
+                
+                 {{#condicionaligualdade situacao "atualizado"}}
+                    <div class="alert alert-success  ">
+                        <p class="text-center text-dark">O produto foi editado com sucesso</p>
+                    </div>
+                {{/condicionaligualdade}}

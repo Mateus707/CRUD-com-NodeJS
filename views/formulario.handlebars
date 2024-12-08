@@ -1,0 +1,35 @@
+<main class="h-100 w-100">
+{{!-- formulario --}}
+    <div class="container h-100 w-100">
+        <div class="row h-100 w-100  justify-content-center align-items-center">
+            <div class="col-6 border border-primary p-4">
+                {{!-- Funcao de igualdade --}}
+                {{>mensagens}}
+                <form action="/cadastrar" method="POST" enctype="multipart/form-data">
+                    <input type="text" class="form-control mb-3" name="nomeProduto" placeholder="nome do produto">
+                    <input type="number" class="form-control mb-3"  name="valorProduto" placeholder="Valor do produto">
+                    <input type="file" class="form-control mb-3"  name="imagemProduto">
+                    <input class="btn btn-outline-success" type="submit" value="Cadastrar">
+                </form>
+            </div>
+        </div>
+    </div>
+    {{!-- listagem de produtos --}}
+    <div class="container">
+        <div class="row">
+            {{#each produtos}}
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card mb-4 p-2">
+                    <img src="./../img/{{imagemProduto}}" alt="">
+                    <div class="d-flex justify-content-evenly text-bold">
+                        <p class="text-center">{{nomeProduto}}</p>
+                        <p class="text-center">R${{valorProduto}},00</p>
+                    </div>
+                    <a href="/formularioEditar/{{idProduto}}  " class="btn btn-primary mb-1">Alterar</a>
+                    <a href="/remover/{{idProduto}}&{{imagemProduto}}" class="btn btn-danger">Remover</a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</main>
